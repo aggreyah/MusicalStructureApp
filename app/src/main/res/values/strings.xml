@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Musical Structure App</string>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Galactic music</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="view_songs_button">View songs</string>
+
+    <!-- Introduction to music player text -->
+    <string name="introduction_text_view">Galactic music player</string>
 </resources>
