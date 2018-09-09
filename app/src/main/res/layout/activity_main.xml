@@ -17,6 +17,7 @@
 
     <Button
         style="@style/show_songs_button"
+        android:id="@+id/view_songs"
         android:text="@string/view_songs_button"/>
 
 </RelativeLayout>
