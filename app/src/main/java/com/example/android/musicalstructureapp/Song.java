@@ -39,7 +39,7 @@ public class Song {
     }
 
     /**get year of release*/
-    public String getmYearOfRelease(){
+    public String getYearOfRelease(){
         return mYearOfRelease;
     }
 }

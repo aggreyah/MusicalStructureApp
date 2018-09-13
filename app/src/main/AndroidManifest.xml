@@ -30,7 +30,7 @@
 
         <activity
             android:name=".SongDetailsActivity"
-            android:label="song_details"
+            android:label="Song Details"
             android:parentActivityName=".ListSongsActivity">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
