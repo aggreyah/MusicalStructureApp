@@ -1,7 +1,10 @@
 package com.example.android.musicalstructureapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,7 +16,7 @@ public class ListSongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_songs);
 
-        ArrayList<Song> songs = new ArrayList<Song>();
+        final ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song("Don Williams", "I'm just a country boy", "Country boy", "1977"));
         songs.add(new Song("Don Williams", "Louisiana saturday night", "Country boy", "1977"));
         songs.add(new Song("Don Williams", "Overlooking and underthing", "Country boy", "1977"));
@@ -40,5 +43,19 @@ public class ListSongsActivity extends AppCompatActivity {
         ListView listView =  findViewById(R.id.songs_list);
 
         listView.setAdapter(songAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent viewSongDetailsIntent =
+                        new Intent(ListSongsActivity.this, SongDetailsActivity.class);
+                viewSongDetailsIntent.putExtra("NAME_OF_ARTIST", songs.get(position).getNameOfArtist());
+                viewSongDetailsIntent.putExtra("NAME_OF_ALBUM", songs.get(position).getNameOfAlbum());
+                viewSongDetailsIntent.putExtra("YEAR_OF_RELEASE", songs.get(position).getYearOfRelease());
+                viewSongDetailsIntent.putExtra("NAME_OF_SONG", songs.get(position).getNameOfSong());
+                startActivity(viewSongDetailsIntent);
+            }
+        });
+
     }
 }
