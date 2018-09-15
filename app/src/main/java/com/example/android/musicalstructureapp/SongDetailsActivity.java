@@ -16,10 +16,10 @@ public class SongDetailsActivity extends AppCompatActivity {
         TextView nameOfAlbumTextView = findViewById(R.id.name_of_album);
         TextView nameOfSongTextView = findViewById(R.id.name_of_song);
 
-        String artistName = getIntent().getStringExtra("NAME_OF_ARTISTS");
-        String yearOfRelease = getIntent().getStringExtra("YEAR_OF_RELEASE");
-        String nameOfAlbum = getIntent().getStringExtra("NAME_OF_ALBUM");
-        String nameOfSong = getIntent().getStringExtra("NAME_OF_SONG");
+        String artistName = getIntent().getStringExtra(getString(R.string.name_of_artist));
+        String yearOfRelease = getIntent().getStringExtra(getString(R.string.year_of_release));
+        String nameOfAlbum = getIntent().getStringExtra(getString(R.string.name_of_album));
+        String nameOfSong = getIntent().getStringExtra(getString(R.string.name_of_song));
 
         nameOfArtistTextView.setText(artistName);
         yearOfReleaseTextView.setText(yearOfRelease);
