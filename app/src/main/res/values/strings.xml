@@ -7,4 +7,60 @@
 
     <!-- Introduction to music player text -->
     <string name="introduction_text_view">Galactic music player</string>
+
+    <!-- Java Strings -->
+    <string name="name_of_artist">nameOfArtist</string>
+    <string name="name_of_album">nameOfAlbum</string>
+    <string name="year_of_release">yearOfRelease</string>
+    <string name="name_of_song">nameOfSong</string>
+    <!--Songs-->
+    <string name="don_williams">Don Williams</string>
+    <string name="country_boy">Country Boy</string>
+    <!--Songs in country boy album -->
+    <string name="country_boy_song">I\'m just a country boy</string>
+    <string name="lousiana">Louisiana saturday night</string>
+    <string name="overlooking">Overlooking and underthing</string>
+    <string name="sneaking">Sneakin around</string>
+    <string name="look_around">Look around you</string>
+    <string name="winner_in_you">I\'ve got a winner in you</string>
+    <string name="rake_and_rumb">Rake and rumbling man</string>
+    <string name="too_many">Too many tears</string>
+    <string name="gotta_be_magic">It\'s gotta be magic</string>
+    <string name="falling">Falling in love</string>
+
+    <!--Year country boy album released-->
+    <string name="year_country_boy_released">1977</string>
+
+    <!--Another don williams album -->
+    <string name="cafe_carolina">Cafe Carolina</string>
+    <!--Year cafe carolina album released-->
+    <string name="year_cafe_carolina_released">1984</string>
+
+    <!--Songs in cafe carolina album -->
+    <string name="the_only_game">The only game in town</string>
+    <string name="walking_a_broke_heart">Walking a broken heart</string>
+    <string name="margie">Margie\'s dream</string>
+    <string name="thing_about_love">That\'s the thing about love</string>
+    <string name="leaving">Leaving</string>
+    <string name="beautiful">Beautiful woman</string>
+    <string name="need_another_you">I\'ll never need another you</string>
+    <string name="time_for_love">It\'s time for love</string>
+    <string name="faithful">I\'ll be faithful to you</string>
+
+    <!--Kenny Rogers songs-->
+    <string name="kenny_rodgers">Kenny Rodgers</string>
+    <string name="love_or_something_like_it">Love or something like it</string>
+
+    <!--Songs in love or something like it album -->
+    <string name="love_or_something_like_it_song">Love or Something Like It</string>
+    <string name="lot_of_that">There\'s a Lot of That Going Around</string>
+    <string name="burried_treasures">Buried Treasures</string>
+    <string name="something_about">Something About Your Song</string>
+    <string name="momma">Momma\'s Waiting</string>
+    <string name="closest_of_friends">We Could Have Been the Closest of Friends</string>
+    <string name="could_be_so_good">I Could Be So Good for You</string>
+    <string name="sail_away">Sail Away</string>
+    <string name="even_a_fool">Even a Fool Would Let Go</string>
+    <string name="highway">Highway Flyer</string>
+    <string name="starting">Starting Again</string>
 </resources>

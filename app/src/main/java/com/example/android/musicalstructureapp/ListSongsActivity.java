@@ -17,30 +17,70 @@ public class ListSongsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_songs);
 
         final ArrayList<Song> songs = new ArrayList<>();
-        songs.add(new Song("Don Williams", "I'm just a country boy", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Louisiana saturday night", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Overlooking and underthing", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Sneakin around", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Look around you", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "I've got a winner in you", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Rake and rumbling man", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Too many tears", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "It's gotta be magic", "Country boy", "1977"));
-        songs.add(new Song("Don Williams", "Falling in love", "Country boy", "1977"));
+        /**first album songs to the ArrayList songs*/
+        songs.add(new Song(getString(R.string.don_williams),
+                String.valueOf(R.string.country_boy_song), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.lousiana), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.overlooking), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.sneaking), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.look_around), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.winner_in_you), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.rake_and_rumb), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams), String.valueOf(R.string.too_many),
+                String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.gotta_be_magic), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.falling), String.valueOf(R.string.country_boy),
+                String.valueOf(R.string.year_country_boy_released)));
 
-        songs.add(new Song("Don Williams", "The only game in town", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "Walking a broken heart", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "Margie's dream", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "That's the thing about love", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "Leaving", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "Beautiful woman", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "I'll never need another you.", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "It's time for love", "Cafe carolina", "1984"));
-        songs.add(new Song("Don Williams", "I'll be faithful to you", "Cafe carolina", "1984"));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.the_only_game), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.walking_a_broke_heart),
+                String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.margie), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.thing_about_love), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.leaving), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.beautiful), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.need_another_you), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.time_for_love), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
+        songs.add(new Song(String.valueOf(R.string.don_williams),
+                String.valueOf(R.string.faithful), String.valueOf(R.string.cafe_carolina),
+                String.valueOf(R.string.year_cafe_carolina_released)));
 
         SongAdapter songAdapter = new SongAdapter(this, songs);
 
-        ListView listView =  findViewById(R.id.songs_list);
+        ListView listView = findViewById(R.id.songs_list);
 
         listView.setAdapter(songAdapter);
 
@@ -49,10 +89,14 @@ public class ListSongsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent viewSongDetailsIntent =
                         new Intent(ListSongsActivity.this, SongDetailsActivity.class);
-                viewSongDetailsIntent.putExtra("NAME_OF_ARTIST", songs.get(position).getNameOfArtist());
-                viewSongDetailsIntent.putExtra("NAME_OF_ALBUM", songs.get(position).getNameOfAlbum());
-                viewSongDetailsIntent.putExtra("YEAR_OF_RELEASE", songs.get(position).getYearOfRelease());
-                viewSongDetailsIntent.putExtra("NAME_OF_SONG", songs.get(position).getNameOfSong());
+                viewSongDetailsIntent.putExtra(String.valueOf(R.string.name_of_artist),
+                        songs.get(position).getNameOfArtist());
+                viewSongDetailsIntent.putExtra(String.valueOf(R.string.name_of_album),
+                        songs.get(position).getNameOfAlbum());
+                viewSongDetailsIntent.putExtra(String.valueOf(R.string.year_of_release),
+                        songs.get(position).getYearOfRelease());
+                viewSongDetailsIntent.putExtra(String.valueOf(R.string.name_of_song),
+                        songs.get(position).getNameOfSong());
                 startActivity(viewSongDetailsIntent);
             }
         });
