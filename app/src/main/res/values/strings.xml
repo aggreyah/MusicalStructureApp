@@ -8,6 +8,9 @@
     <!-- Introduction to music player text -->
     <string name="introduction_text_view">Galactic music player</string>
 
+    <!-- More details-->
+    <string name="more_details">more details</string>
+
     <!-- Java Strings -->
     <string name="name_of_artist">nameOfArtist</string>
     <string name="name_of_album">nameOfAlbum</string>
@@ -51,10 +54,13 @@
     <string name="kenny_rodgers">Kenny Rodgers</string>
     <string name="love_or_something_like_it">Love or something like it</string>
 
+    <!--Year love or something like it album released-->
+    <string name="year_love_or_something_released">1978</string>
+
     <!--Songs in love or something like it album -->
     <string name="love_or_something_like_it_song">Love or Something Like It</string>
     <string name="lot_of_that">There\'s a Lot of That Going Around</string>
-    <string name="burried_treasures">Buried Treasures</string>
+    <string name="buried_treasures">Buried Treasures</string>
     <string name="something_about">Something About Your Song</string>
     <string name="momma">Momma\'s Waiting</string>
     <string name="closest_of_friends">We Could Have Been the Closest of Friends</string>
@@ -63,4 +69,10 @@
     <string name="even_a_fool">Even a Fool Would Let Go</string>
     <string name="highway">Highway Flyer</string>
     <string name="starting">Starting Again</string>
+
+    <!--SongDetailsActivity strings-->
+    <string name="name">Name of artist:\ </string>
+    <string name="album">Album:\ </string>
+    <string name="year">Year released:\ </string>
+    <string name="song">Song title:\ </string>
 </resources>

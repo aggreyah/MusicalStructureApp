@@ -2,13 +2,13 @@ package com.example.android.musicalstructureapp;
 
 public class Song {
     //class field storing the name of the song
-    String mNameOfSong;
+    private String mNameOfSong;
     //class field storing the album of the song
-    String mAlbumOfSong;
+    private String mAlbumOfSong;
     //class field storing the name of the artist who sang the song
-    String mNameOfArtist;
+    private String mNameOfArtist;
     //class field storing the name of the song
-    String mYearOfRelease;
+    private String mYearOfRelease;
 
     /**
      * @param artName for the name of the artist
