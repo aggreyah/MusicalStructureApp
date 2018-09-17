@@ -17,7 +17,7 @@ public class ListSongsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_songs);
 
         final ArrayList<Song> songs = new ArrayList<>();
-        /**first album songs to the ArrayList songs*/
+        /** adding country boy album songs to the ArrayList songs*/
         songs.add(new Song(getString(R.string.don_williams),
                 getString(R.string.country_boy_song), getString(R.string.country_boy),
                 getString(R.string.year_country_boy_released)));
@@ -49,6 +49,7 @@ public class ListSongsActivity extends AppCompatActivity {
                 getString(R.string.falling), getString(R.string.country_boy),
                 getString(R.string.year_country_boy_released)));
 
+        /** adding cafe carolina album songs to the ArrayList songs*/
         songs.add(new Song(getString(R.string.don_williams),
                 getString(R.string.the_only_game), getString(R.string.cafe_carolina),
                 getString(R.string.year_cafe_carolina_released)));
@@ -78,6 +79,42 @@ public class ListSongsActivity extends AppCompatActivity {
                 getString(R.string.faithful), getString(R.string.cafe_carolina),
                 getString(R.string.year_cafe_carolina_released)));
 
+        /** adding love or something like it album songs to the ArrayList songs*/
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.love_or_something_like_it_song), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.lot_of_that), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.buried_treasures), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.something_about), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.momma), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.closest_of_friends), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.could_be_so_good), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.sail_away), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.even_a_fool), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.highway), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+        songs.add(new Song(getString(R.string.kenny_rodgers),
+                getString(R.string.starting), getString(R.string.love_or_something_like_it),
+                getString(R.string.year_love_or_something_released)));
+
+        /**Create a new song adapter object and pass songs - this is an extension of ArrayAdapter*/
         SongAdapter songAdapter = new SongAdapter(this, songs);
 
         ListView listView = findViewById(R.id.songs_list);
@@ -100,6 +137,5 @@ public class ListSongsActivity extends AppCompatActivity {
                 startActivity(viewSongDetailsIntent);
             }
         });
-
     }
 }

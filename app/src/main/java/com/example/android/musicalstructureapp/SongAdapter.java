@@ -17,19 +17,30 @@ public class SongAdapter extends ArrayAdapter<Song> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View songItemView = convertView;
+        ViewHolder holder;
         if (songItemView == null) {
             songItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.song_item, parent, false);
+            holder = new ViewHolder();
+            holder.songNameTextView = songItemView.findViewById(R.id.name_of_song);
+            holder.artistNameTextView = songItemView.findViewById(R.id.name_of_artist);
+            songItemView.setTag(holder);
+        }else{
+            holder = (ViewHolder) songItemView.getTag();
         }
 
         Song currentSong = getItem(position);
 
-        TextView songNameTextView = songItemView.findViewById(R.id.name_of_song);
-        songNameTextView.setText(currentSong.getNameOfSong());
-
-        TextView artistNameTextView = songItemView.findViewById(R.id.name_of_artist);
-        artistNameTextView.setText(currentSong.getNameOfArtist());
-
+        holder.songNameTextView.setText(currentSong.getNameOfSong());
+        holder.artistNameTextView.setText(currentSong.getNameOfArtist());
         return songItemView;
+
+
+    }
+    static class ViewHolder {
+        private TextView songNameTextView;
+        private TextView artistNameTextView;
     }
 }
+
+
